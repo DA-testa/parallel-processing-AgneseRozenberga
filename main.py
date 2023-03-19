@@ -1,7 +1,13 @@
 # python3
-
+#221RDB117  Agnese Rozenberga 11.grupa
 def parallel_processing(n, m, data):
     output = []
+    paralelaisproces = [0] * n
+    for i in range (m):
+        pirmie=paralelaisproces.index(min(paralelaisproces))
+        sakums= paralelaisproces[pirmie]
+        paralelaisproces[pirmie] = data[i] +paralelaisproces[pirmie]
+        output.append((pirmie, sakums) ) 
     # TODO: write the function for simulating parallel tasks, 
     # create the output pairs
 
@@ -13,15 +19,18 @@ def main():
     # first line - n and m
     # n - thread count 
     # m - job count
-    n = 0
-    m = 0
+    n,m = map(int, input(). split())
+    
+
 
     # second line - data 
     # data - contains m integers t(i) - the times in seconds it takes any thread to process i-th job
-    data = []
+    data = list (map(int, input(). split()))
 
     # TODO: create the function
     result = parallel_processing(n,m,data)
+    for pirmie,sakums in result:
+        print(pirmie, sakums)
     
     # TODO: print out the results, each pair in it's own line
 
