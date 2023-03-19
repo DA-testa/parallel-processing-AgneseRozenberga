@@ -5,8 +5,8 @@ def parallel_processing(n, m, data):
     paralelaisproces = [0] * n
     for i in range (m):
         pirmie=paralelaisproces.index(min(paralelaisproces))
-        sakums= paralelaisproces[sakums]
-        paralelaisproces[sakums] = data[i] +paralelaisproces[sakums]
+        sakums= paralelaisproces[pirmie]
+        paralelaisproces[pirmie] = data[i] +paralelaisproces[pirmie]
         output.append((pirmie, sakums) ) 
     # TODO: write the function for simulating parallel tasks, 
     # create the output pairs
