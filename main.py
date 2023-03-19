@@ -1,5 +1,5 @@
 # python3
-
+#221RDB117  Agnese Rozenberga 11.grupa
 def parallel_processing(n, m, data):
     output = []
     paralelaisproces = [0] * n
